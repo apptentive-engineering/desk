@@ -1,0 +1,12 @@
+{
+    "label": {
+        "name": "Another Label",
+        "description": "Label Description",
+        "types": [
+          "case",
+          "macro"
+        ],
+        "active": true,
+        "position": 2
+    }
+}

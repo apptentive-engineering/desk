@@ -1,0 +1,31 @@
+{
+    "results": [
+      {
+        "label": {
+            "name": "MyLabel",
+            "description": "My Label Description",
+            "types": [
+              "case",
+              "macro"
+            ],
+            "active": true,
+            "position": 1,
+        }
+      },
+      {
+        "label": {
+            "name": "Another Label",
+            "description": "Label Description",
+            "types": [
+              "case",
+              "macro"
+            ],
+            "active": true,
+            "position": 2,
+        }
+      }
+    ],
+    "page": 1,
+    "count": 20,
+    "total": 2
+}
