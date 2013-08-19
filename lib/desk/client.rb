@@ -15,6 +15,8 @@ module Desk
     require 'desk/client/topic'
     require 'desk/client/article'
     require 'desk/client/macro'
+    require 'desk/client/label'
+    require 'desk/client/custom_field'
 
     alias :api_endpoint :endpoint
 
@@ -26,5 +28,7 @@ module Desk
     include Desk::Client::Topic
     include Desk::Client::Article
     include Desk::Client::Macro
+    include Desk::Client::Label
+    include Desk::Client::CustomField
   end
 end
