@@ -1,0 +1,16 @@
+{
+    "custom_field": {
+        "name": "last_agent",
+        "label": "Last Agent to Update",
+        "type": "ticket",
+        "active": false,
+        "data": {
+          "type": "list",
+          "choices": [
+            "Marianne",
+            "Elinor",
+            "Margaret"
+          ]
+        }
+    }
+}

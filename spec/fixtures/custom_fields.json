@@ -1,0 +1,34 @@
+{
+    "results": [
+        {
+            "custom_field": {
+                "name": "last_agent",
+                "label": "Last Agent to Update",
+                "type": "ticket",
+                "active": false,
+                "data": {
+                  "type": "list",
+                  "choices": [
+                    "Marianne",
+                    "Elinor",
+                    "Margaret"
+                  ]
+                }
+            }
+        },
+        {
+            "custom_field": {
+                "name": "frequent_buyer",
+                "label": "Frequent Buyer",
+                "type": "customer",
+                "active": true,
+                "data": {
+                  "type": "boolean"
+                }
+            }
+        }
+    ],
+    "page": 1,
+    "count": 20,
+    "total": 2
+}
