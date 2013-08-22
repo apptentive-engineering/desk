@@ -65,12 +65,13 @@ module Hashie
     end
 
     def links
-      Links.new(self._links) if key?("_links")
+      return Links.new(self._links) if key?("_links")
       Links.new(self.raw._links) if includes_key_chain?("raw._links")
     end
 
     def results
-      self._embedded['entries'] if key?('_embedded') && self._embedded.key?('entries')
+      return self._embedded['entries'] if key?('_embedded') && self._embedded.key?('entries')
+      self.raw._embedded['entries'] if includes_key_chain?("raw._embedded.entries")
     end
 
   end
