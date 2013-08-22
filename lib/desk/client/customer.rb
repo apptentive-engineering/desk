@@ -7,7 +7,7 @@ module Desk
       #   @option options [Boolean, String, Integer]
       #   @example Return extended information for customers
       #     Desk.customers
-      #     Desk.customers(:since_id => 12345, :count => 5)
+      #     Desk.customers(:page => 1, :per_page => 3)
       # @format :json
       # @authenticated true
       # @see http://dev.desk.com/docs/api/customers
@@ -15,6 +15,20 @@ module Desk
         options = args.last.is_a?(Hash) ? args.pop : {}
         get("customers",options)
       end
+
+        # Returns extended information of customers using search parameters
+        #
+        #   @option options [Boolean, String, Integer]
+        #   @example Return extended information for customers
+        #     Desk.customers
+        #     Desk.customers(:since_id => 12345, :count => 5)
+        # @format :json
+        # @authenticated true
+        # @see http://dev.desk.com/docs/api/customers
+        def search_customers(*args)
+          options = args.last.is_a?(Hash) ? args.pop : {}
+          get("customers/search",options)
+        end
 
       # Returns extended information on a single customer
       #
