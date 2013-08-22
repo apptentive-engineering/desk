@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/topics/show
       def topics(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("topics",options)
-        response
+        get("topics",options)
       end
 
       # Returns extended information on a single topic

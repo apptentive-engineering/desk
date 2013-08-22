@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/interactions
       def interactions(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("interactions",options)
-        response
+        get("interactions",options)
       end
 
       def create_interaction(*args)

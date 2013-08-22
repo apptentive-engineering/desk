@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/custom_fields
       def custom_fields(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("custom_fields",options)
-        response
+        get("custom_fields",options)
       end
 
       # Returns extended information on a single custom field

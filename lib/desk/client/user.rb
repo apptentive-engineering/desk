@@ -30,8 +30,7 @@ module Desk
       #   Desk.users
       def users(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get('users', options)
-        response
+        get('users', options)
       end
     end
   end

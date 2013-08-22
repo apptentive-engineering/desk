@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/macros
       def macros(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("macros",options)
-        response
+        get("macros",options)
       end
 
       # Returns extended information on a single macro

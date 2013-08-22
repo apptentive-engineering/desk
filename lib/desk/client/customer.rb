@@ -13,8 +13,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/customers
       def customers(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("customers",options)
-        response
+        get("customers",options)
       end
 
       # Returns extended information on a single customer

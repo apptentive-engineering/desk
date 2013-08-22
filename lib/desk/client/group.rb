@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/groups
       def groups(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("groups",options)
-        response
+        get("groups",options)
       end
 
       # Returns extended information on a single group

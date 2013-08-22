@@ -14,8 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/labels
       def labels(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        response = get("labels",options)
-        response
+        get("labels", options)
       end
 
       # Returns extended information on a single label
