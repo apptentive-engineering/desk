@@ -49,7 +49,7 @@ module Hashie
     def id
       if includes_key_chain?("raw._links.self.href")
         case self._links.self['class']
-        when 'case', 'phone_call'
+        when 'case', 'phone_call', 'customer'
           self._links.self.href.split("/")[4].to_i
         end
       end
