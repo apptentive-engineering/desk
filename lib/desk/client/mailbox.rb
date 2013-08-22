@@ -14,7 +14,7 @@ module Desk
       # @see http://dev.desk.com/docs/api/inbound-mailboxes
       def inbound_mailboxes(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
-        get("inbound_mailboxes", options)
+        get("mailboxes/inbound", options)
       end
 
       # Returns extended information on a single inbound mailbox

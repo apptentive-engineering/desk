@@ -16,7 +16,7 @@ describe Desk::Client do
 
           it "should get the correct resource" do
             @client.inbound_mailboxes
-            a_get("inbound_mailboxes.#{format}").
+            a_get("mailboxes/inbound.#{format}").
               should have_been_made
           end
 
