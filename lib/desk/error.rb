@@ -41,6 +41,9 @@ module Desk
   # Raised when Desk returns the HTTP status code 406
   class NotAcceptable < Error; end
 
+  # Raised when Desk returns the HTTP status code 409
+  class Conflict < Error; end
+
   # Raised when Desk returns the HTTP status code 420
   class EnhanceYourCalm < Error
     # The number of seconds your application should wait before requesting date from the Search API again
@@ -50,7 +53,10 @@ module Desk
       @http_headers.values_at('retry-after', 'Retry-After').detect {|value| value }.to_i
     end
   end
-  
+
+  # Raised when Desk returns the HTTP status code 422
+  class Unprocessable < Error; end
+
   # Raised when Desk max_requests is reached and use_max_requests is set to true
   class TooManyRequests < StandardError; end
 
