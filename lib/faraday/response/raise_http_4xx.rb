@@ -35,16 +35,16 @@ module Faraday
       if body.nil?
         nil
       elsif body.includes_key_chain?('error') || body.includes_key_chain?('raw.error')
-        ": #{body['error']}"
+        ": #{body.error}"
       elsif body.includes_key_chain?('errors') || body.includes_key_chain?('raw.errors')
-        first = body['errors'].to_a.first
+        first = body.errors.to_a.first
         if first.kind_of? Hash
           ": #{first['message'].chomp}"
         else
           ": #{first.chomp}"
         end
       elsif body.includes_key_chain?('message') || body.includes_key_chain?('raw.message')
-        ": #{body['message'].chomp}"
+        ": #{body.message.chomp}"
       end
     end
   end
