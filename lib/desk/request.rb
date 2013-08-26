@@ -58,7 +58,6 @@ module Desk
           request.body = options.to_json unless options.empty?
         end
       end
-      p "Response: #{response.inspect}"
       raw ? response : response.body
     end
 

@@ -15,6 +15,7 @@ describe Faraday::Response do
     420 => Desk::EnhanceYourCalm,
     422 => Desk::Unprocessable,
     500 => Desk::InternalServerError,
+    501 => Desk::NotImplemented,
     502 => Desk::BadGateway,
     503 => Desk::ServiceUnavailable,
   }.each do |status, exception|

@@ -34,16 +34,16 @@ module Faraday
     def error_body(body)
       if body.nil?
         nil
-      elsif body['error']
+      elsif body.includes_key_chain?('error') || body.includes_key_chain?('raw.error')
         ": #{body['error']}"
-      elsif body['errors']
+      elsif body.includes_key_chain?('errors') || body.includes_key_chain?('raw.errors')
         first = body['errors'].to_a.first
         if first.kind_of? Hash
           ": #{first['message'].chomp}"
         else
           ": #{first.chomp}"
         end
-      elsif body['message']
+      elsif body.includes_key_chain?('message') || body.includes_key_chain?('raw.message')
         ": #{body['message'].chomp}"
       end
     end

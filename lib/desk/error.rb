@@ -63,6 +63,9 @@ module Desk
   # Raised when Desk returns the HTTP status code 500
   class InternalServerError < Error; end
 
+  # Raised when Desk returns the HTTP status code 501
+  class NotImplemented < Error; end
+
   # Raised when Desk returns the HTTP status code 502
   class BadGateway < Error; end
 
