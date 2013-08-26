@@ -67,6 +67,15 @@ module Desk
         post("cases/#{id}/replies", options)
       end
 
+      def notes(id)
+        get("cases/#{id}/notes")
+      end
+
+      def create_note(id, *args)
+        options = args.last.is_a?(Hash) ? args.pop : {}
+        post("cases/#{id}/notes", options)
+      end
+
       def case_url(id)
         "https://#{subdomain}.desk.com/agent/case/#{id}"
       end
