@@ -48,8 +48,10 @@ module Hashie
 
     def id
       case self.type
-      when 'case', 'phone_call', 'customer', 'user'
+      when 'case', 'customer', 'user'
         self._links.self.href.split("/")[4].to_i
+      when 'phone_call', 'email', 'note'
+        self._links.self.href.split("/")[6].to_i
       end
     end
 
