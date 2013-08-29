@@ -38,11 +38,7 @@ module Faraday
         ": #{body.error}"
       elsif body.includes_key_chain?('errors') || body.includes_key_chain?('raw.errors')
         first = body.errors.to_a.first
-        if first.kind_of? Hash
-          ": #{first['message']}"
-        else
-          ": #{first}"
-        end
+        ": #{first}"
       elsif body.includes_key_chain?('message') || body.includes_key_chain?('raw.message')
         ": #{body.message}"
       end
