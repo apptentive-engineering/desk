@@ -1,5 +1,4 @@
 {
-    "customer": {
         "custom_test": null,
         "first_name": "Jeremy",
         "last_name": "Suriel",
@@ -54,5 +53,4 @@
             } 
         ],
         "id": 8 
-    }
 }

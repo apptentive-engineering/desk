@@ -39,8 +39,7 @@ module Desk
       # @authenticated true
       # @see http://dev.desk.com/docs/api/customers/show
       def customer(id)
-        response = get("customers/#{id}")
-        response.customer
+        get("customers/#{id}")
       end
 
       # Create a new customer
