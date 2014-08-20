@@ -3,7 +3,7 @@ require File.expand_path('../lib/desk/version', __FILE__)
 
 Gem::Specification.new do |s|
   # s.add_development_dependency('json', '~> 1.5')
-  s.add_development_dependency('nokogiri', '~> 1.4')
+  s.add_development_dependency('nokogiri', '~> 1.6')
   s.add_development_dependency('maruku', '~> 0.6')
   s.add_development_dependency('rake', '~> 0.8')
   s.add_development_dependency('rspec', '~> 2.5')
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('yard', '~> 0.6')
   s.add_runtime_dependency('json', '~> 1.7')  if RUBY_VERSION < '1.9'
   s.add_runtime_dependency('hashie', '~> 1.2.0')
-  s.add_runtime_dependency('faraday', '~> 0.8.0')
+  s.add_runtime_dependency('faraday', '~> 0.9.0')
   s.add_runtime_dependency('faraday_middleware', '~> 0.9.0')
   s.add_runtime_dependency('jruby-openssl', '~> 0.7.2') if RUBY_PLATFORM == 'java'
   s.add_runtime_dependency('multi_json', '~> 1.6')
